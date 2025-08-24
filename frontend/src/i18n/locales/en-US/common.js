@@ -82,6 +82,7 @@ export default {
   },
   nav: {
     home: "Home",
+    text: "MD Editor",
     upload: "File Upload",
     mountExplorer: "Mount Explorer",
     admin: "Admin Panel",
