@@ -173,6 +173,16 @@ onBeforeUnmount(() => {
                 {{ $t("nav.home") }}
               </router-link>
               <router-link
+                to="/text"
+                :class="[
+                  activePage === 'text' ? 'border-primary-500 text-current' : 'border-transparent hover:border-gray-300',
+                  'inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium transition-colors duration-200',
+                  activePage !== 'text' && isDarkMode ? 'text-gray-300 hover:text-gray-100' : activePage !== 'text' ? 'text-gray-500 hover:text-gray-700' : '',
+                ]"
+              >
+                {{ $t("nav.text") }}
+              </router-link>
+              <router-link
                 to="/upload"
                 :class="[
                   activePage === 'upload' ? 'border-primary-500 text-current' : 'border-transparent hover:border-gray-300',
