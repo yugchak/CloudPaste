@@ -34,8 +34,7 @@ const createOfflineAwareImport = (importFn, componentName = "页面") => {
     });
 };
 
-const HomeView = createOfflineAwareImport(() => import("../views/MainView.vue"), "首页");
-const TextView = createOfflineAwareImport(() => import("../views/MarkdownEditorView.vue"), "文本编辑页面");
+const HomeView = createOfflineAwareImport(() => import("../views/MarkdownEditorView.vue"), "首页");
 const UploadView = createOfflineAwareImport(() => import("../views/UploadView.vue"), "文件上传页面");
 const PasteView = createOfflineAwareImport(() => import("../views/PasteView.vue"), "文本分享页面");
 const FileView = createOfflineAwareImport(() => import("../views/FileView.vue"), "文件预览页面");
@@ -50,15 +49,6 @@ const routes = [
     meta: {
       title: "CloudPaste - 在线剪贴板",
       originalPage: "home",
-    },
-  },
-  {
-    path: "/text",
-    name: "Text",
-    component: TextView,
-    meta: {
-      title: "CloudPaste - MD编辑器",
-      originalPage: "text",
     },
   },
   {
